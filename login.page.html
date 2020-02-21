@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="Password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" routerLink="/tabs">
+    <ion-icon name="log-in"></ion-icon> 
+    Login 
+  </ion-button>
+
+  <ion-button expand="block" fill="outline" color="secondary">resiter</ion-button>
+
+  <button ion-button full (click)="loginWithFB()"> Login Facebook </button>
+
+  <ion-card *ngIf="userData">
+    <ion-card-header>{{ userData.username }}</ion-card-header>
+</ion-card>
+</ion-content>
